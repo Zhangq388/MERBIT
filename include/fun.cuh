@@ -1,7 +1,6 @@
 #ifndef __FUN__
 #define __FUN__
 #include "./tile.cuh"
-#include "./tile1.cuh"
 template<typename ValueType> void Fun_CSRMV(const ENV& env, PARAMETER<ValueType>& para);
 template<typename ValueType> void Fun_COOMV(const ENV& env, PARAMETER<ValueType>& para);
 template<typename ValueType> void Fun_MERGEMV(const ENV& env, PARAMETER<ValueType>& para);
