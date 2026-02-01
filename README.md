@@ -11,7 +11,7 @@
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build -j
 
-##Dataset configuration and running
+## Dataset configuration and running
 
 Datasets are configured in a config file.
 You run the program by passing a dataset ID:
@@ -25,4 +25,5 @@ Example (pseudo format):
 2 /data3/graph/mtxxia/yyy.mtx
 ...
 
+## Run
 So ./main 1 will load the dataset path corresponding to ID 1.
