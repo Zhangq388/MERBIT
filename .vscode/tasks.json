@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++ Compile",
+            "type": "shell",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++14",
+                "-g",  //生成调试信息
+                "-c",  //只生成obj文件不链接
+                "${workspaceFolder}/src/${fileBasenameNoExtension}.cpp",
+                "-o",
+                "${workspaceFolder}/obj/c++/${fileBasenameNoExtension}.o"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "C++ Link",
+            "type": "shell",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/obj/c++/*.o",
+                "-lpthread",
+                "-o",
+                "${workspaceFolder}/bin/main.out"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "CUDA C++ Compile",
+            "type": "shell",
+            "command": "/usr/local/cuda/bin/nvcc",
+            "args": [
+                "-g",
+                "-G",
+                "--extended-lambda",
+                "-arch=sm_86",
+                "-dc",
+                "${workspaceFolder}/src/${fileBasenameNoExtension}.cu",
+                "-I/usr/local/cuda/include",
+                "-o",
+                "${workspaceFolder}/obj/cuda/${fileBasenameNoExtension}.o"
+            ],
+            "problemMatcher": [
+                "$nvcc"
+            ]
+        },
+        {
+            "label": "CUDA C++ Link",
+            "type": "shell",
+            "command": "/usr/local/cuda/bin/nvcc",
+            "args": [
+                "-g",
+                "-G",
+                "-arch=sm_86",
+                "${workspaceFolder}/obj/cuda/*.o",
+                "-I/usr/local/cuda/include",
+                "-L/usr/local/cuda/lib64",
+                "-lcusparse", 
+                "-lcublas",
+                "-o",
+                "${workspaceFolder}/bin/main.out"
+            ],
+            "problemMatcher": [
+                "$nvcc"
+            ]
+        }
+    ]
+}

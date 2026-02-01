@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/main",
+            "cwd": "${workspaceFolder}/bin",
+            "miDebuggerPath": "/usr/local/bin/gdb",
+        },
+        {
+            "name": "CUDA C++: Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/main",
+            "args": ["4"],
+            "cwd": "${workspaceFolder}",
+            "miDebuggerPath": "/usr/local/cuda/bin/cuda-gdb",
+        }
+    ]
+}

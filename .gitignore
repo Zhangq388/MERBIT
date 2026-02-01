@@ -1,0 +1,83 @@
+########################################
+# CMake / build
+########################################
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CTestTestfile.cmake
+compile_commands.json
+
+########################################
+# Binaries / objects / libs
+########################################
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+########################################
+# CUDA artifacts / profilers
+########################################
+*.ptx
+*.cubin
+*.fatbin
+*.nvvp
+*.ncu-rep
+*.qdrep
+*.nsys-rep
+
+########################################
+# Logs / results
+########################################
+*.log
+*.csv
+*.json
+results/
+output/
+tmp/
+
+########################################
+# VSCode
+########################################
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/cmake-kits.json
+!.vscode/cmake-variants.json
+!.vscode/extensions.json
+
+########################################
+# OS / editors
+########################################
+.DS_Store
+Thumbs.db
+*.swp
+
+########################################
+# Do NOT commit datasets
+# (your data is outside repo already, but keep common names ignored)
+########################################
+data/
+datasets/
+graphs/
+*.mtx
+*.graph
+*.bin
+
+# runtime/profiling outputs
+main
+log.txt
+result/
+sections/
+*.ncu-rep
+*.qdrep
+*.nsys-rep
