@@ -4,7 +4,7 @@ int main(int argc, char* argv[])
 {  
     //变量赋值
     const int device_id = 2;
-    const std::string config = "/home/ta/zhangq388/SPMV/config/config5.txt";
+    const std::string config = "/home/ta/zhangq388/SPMV/config/config.txt";
     const std::string log = "/home/ta/zhangq388/SPMV/log.txt";
     FSTR.open(log, std::ios_base::app);
     //Timer   timer;
